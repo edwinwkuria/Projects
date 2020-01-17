@@ -1,0 +1,607 @@
+JavaScript Display Possibilities
+JavaScript can "display" data in different ways:
+
+Writing into an HTML element, using innerHTML.
+Writing into the HTML output using document.write().
+Writing into an alert box, using window.alert().
+Writing into the browser console, using console.log().
+
+Using innerHTML
+To access an HTML element, JavaScript can use the document.getElementById(id) method.
+
+JavaScript Keywords
+JavaScript statements often start with a keyword to identify the JavaScript action to be performed.
+
+Here is a list of some of the keywords you will learn about in this tutorial:
+
+Keyword	Description
+break	Terminates a switch or a loop
+continue	Jumps out of a loop and starts at the top
+debugger	Stops the execution of JavaScript, and calls (if available) the debugging function
+do ... while	Executes a block of statements, and repeats the block, while a condition is true
+for	Marks a block of statements to be executed, as long as a condition is true
+function	Declares a function
+if ... else	Marks a block of statements to be executed, depending on a condition
+return	Exits a function
+switch	Marks a block of statements to be executed, depending on different cases
+try ... catch	Implements error handling to a block of statements
+var	Declares a variable
+
+JavaScript Values
+The JavaScript syntax defines two types of values: Fixed values and variable values.
+Fixed values are called literals. Variable values are called variables.
+
+JavaScript Comments
+Not all JavaScript statements are "executed".
+Code after double slashes // or between /* and */ is treated as a comment.
+Comments are ignored, and will not be executed:
+
+JavaScript Identifiers
+All JavaScript variables must be identified with unique names.
+These unique names are called identifiers.
+Identifiers can be short names (like x and y) or more descriptive names (age, sum, totalVolume).
+The Assignment Operator
+In JavaScript, the equal sign (=) is an "assignment" operator, not an "equal to" operator.
+
+One Statement, Many Variables
+You can declare many variables in one statement.
+Start the statement with var and separate the variables by comma:
+var person = "John Doe", carName = "Volvo", price = 200;
+
+JavaScript Operators
++	Addition
+-	Subtraction
+*	Multiplication
+/	Division
+%	Modulus (Division Remainder)
+++	Increment
+--	Decrement
+
+==	equal to
+===	equal value and equal type
+!=	not equal
+!==	not equal value or not equal type
+>	greater than
+<	less than
+>=	greater than or equal to
+<=	less than or equal to
+?	ternary operator
+
+&&	logical and
+||	logical or
+!	logical not
+
+JavaScript Assignment Operators
+Operator	Example	Same As
+=	x = y	x = y
++=	x += y	x = x + y
+-=	x -= y	x = x - y
+*=	x *= y	x = x * y
+/=	x /= y	x = x / y
+%=	x %= y	x = x % y
+<<=	x <<= y	x = x << y
+>>=	x >>= y	x = x >> y
+>>>=	x >>>= y	x = x >>> y
+&=	x &= y	x = x & y
+^=	x ^= y	x = x ^ y
+|=	x |= y	x = x | y
+**=	x **= y	x = x ** y
+
+JavaScript Data Types
+
+JavaScript Arrays
+JavaScript arrays are written with square brackets.
+Array items are separated by commas.
+The following code declares (creates) an array called cars, containing three items (car names):
+
+var length = 16;                               // Number
+var lastName = "Johnson";                      // String
+var x = {firstName:"John", lastName:"Doe"};    // Object
+
+JavaScript Objects
+JavaScript objects are written with curly braces.
+Object properties are written as name:value pairs, separated by commas.
+
+Difference Between Undefined and Null
+Undefined and null are equal in value but different in type:
+typeof undefined           // undefined
+typeof null                // object
+null === undefined         // false
+null == undefined          // true
+
+Primitive Data
+A primitive data value is a single simple data value with no additional properties and methods.
+The typeof operator can return one of these primitive types:
+string
+number
+boolean
+undefined
+
+JavaScript Functions
+A JavaScript function is a block of code designed to perform a particular task.
+A JavaScript function is executed when "something" invokes it (calls it).
+eg
+function myFunction(p1, p2) {
+    return p1 * p2;              // The function returns the product of p1 and p2
+}
+
+JavaScript Function Syntax
+function name(parameter1, parameter2, parameter3) {
+    code to be executed
+}
+
+Function Return
+When JavaScript reaches a return statement, the function will stop executing.
+If the function was invoked from a statement, JavaScript will "return" to execute the code after the invoking statement.
+Functions often compute a return value. The return value is "returned" back to the "caller":
+
+
+The () Operator Invokes the Function
+
+Object Properties
+The name:values pairs in JavaScript objects are called properties:
+Accessing Object Properties
+You can access object properties in two ways:
+objectName.propertyName
+
+The this Keyword
+In a function definition, this refers to the "owner" of the function.
+In the example above, this is the person object that "owns" the fullName function.
+In other words, this.firstName means the firstName property of this object.
+
+var person = {
+    firstName: "John",
+    lastName : "Doe",
+    id       : 5566,
+    fullName : function() {
+        return this.firstName + " " + this.lastName;
+    }
+};
+
+In the example above, the JavaScript code changes the content of the element with id="demo".
+In the next example, the code changes the content of its own element (using this.innerHTML):
+
+onchange	An HTML element has been changed
+onclick	The user clicks an HTML element
+onmouseover	The user moves the mouse over an HTML element
+onmouseout	The user moves the mouse away from an HTML element
+onkeydown	The user pushes a keyboard key
+onload	The browser has finished loading the page
+
+JavaScript Strings
+JavaScript strings are used for storing and manipulating text.
+String Length
+The length of a string is found in the built in property length:
+var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var sln = txt.length;
+
+The solution to avoid this problem, is to use the backslash escape character.
+Code	Result	Description
+\'	'	Single quote
+\"	"	Double quote
+\\	\	Backslash
+
+
+Strings Can be Objects
+Normally, JavaScript strings are primitive values, created from literals:
+var firstName = "John";
+But strings can also be defined as objects with the keyword new:
+var firstName = new String("John");
+
+Finding a String in a String
+The indexOf() method returns the index of (the position of) the first occurrence of a specified text in a string:
+
+The lastIndexOf() method returns the index of the last occurrence of a specified text in a string:
+Both methods accept a second parameter as the starting position for the search:var pos = str.indexOf("locate",15);
+
+The search() method searches a string for a specified value and returns the position of the match:
+
+The slice() Method
+slice() extracts a part of a string and returns the extracted part in a new string.
+The method takes 2 parameters: the starting index (position), and the ending index (position).
+This example slices out a portion of a string from position 7 to position 13:
+
+The substring() Method
+substring() is similar to slice().
+The difference is that substring() cannot accept negative indexes.
+
+Replacing String Content
+The replace() method replaces a specified value with another value in a string:
+
+By default, the replace() function is case sensitive.
+To replace case insensitive, use a regular expression with an /i flag (insensitive):
+To replace all matches, use a regular expression with a /g flag (global match):
+
+Converting to Upper and Lower Case
+A string is converted to upper case with toUpperCase():
+A string is converted to lower case with toLowerCase():
+
+The concat() Method
+concat() joins two or more strings:
+var text = "Hello" + " " + "World!";
+var text = "Hello".concat(" ", "World!");
+
+String.trim()
+String.trim() removes whitespace from both sides of a string.
+
+The charAt() Method
+The charAt() method returns the character at a specified index (position) in a string:
+
+The charCodeAt() Method
+The charCodeAt() method returns the unicode of the character at a specified index in a string:
+
+Accessing a String as an Array is Unsafe
+
+
+Converting a String to an Array
+A string can be converted to an array with the split() method:
+var txt = "a,b,c,d,e";   // String
+txt.split(",");          // Split on commas
+txt.split(" ");          // Split on spaces
+txt.split("|");          // Split on pipe
+
+
+JavaScript Numbers
+You can use the global JavaScript function isNaN() to find out if a value is a number:
+
+Infinity
+Infinity (or -Infinity) is the value JavaScript will return if you calculate a number outside the largest possible number.
+
+Hexadecimal
+JavaScript interprets numeric constants as hexadecimal if they are preceded by 0x.
+
+By default, JavaScript displays numbers as base 10 decimals.
+But you can use the toString() method to output numbers from base 2 to base 36.
+Hexadecimal is base 16. Decimal is base 10. Octal is base 8. Binary is base 2.
+
+The toString() Method
+toString() returns a number as a string.
+All number methods can be used on any type of numbers (literals, variables, or expressions):
+
+The toExponential() Method
+toExponential() returns a string, with a number rounded and written using exponential notation.
+A parameter defines the number of characters behind the decimal point:
+
+The toFixed() Method
+toFixed() returns a string, with the number written with a specified number of decimals:
+
+The toPrecision() Method
+toPrecision() returns a string, with a number written with a specified length:
+
+The valueOf() Method
+valueOf() returns a number as a number.
+
+Global Methods
+JavaScript global methods can be used on all JavaScript data types.
+These are the most relevant methods, when working with numbers:
+Method	Description
+Number()	Returns a number, converted from its argument.
+parseFloat()	Parses its argument and returns a floating point number
+parseInt()	Parses its argument and returns an integer
+
+Property	Description
+MAX_VALUE	Returns the largest number possible in JavaScript
+MIN_VALUE	Returns the smallest number possible in JavaScript
+NEGATIVE_INFINITY	Represents negative infinity (returned on overflow)
+NaN	Represents a "Not-a-Number" value
+POSITIVE_INFINITY	Represents infinity (returned on overflow)
+
+Number Properties Cannot be Used on Variables
+Number properties belongs to the JavaScript's number object wrapper called Number.
+These properties can only be accessed as Number.MAX_VALUE.
+Using myNumber.MAX_VALUE, where myNumber is a variable, expression, or value, will return undefined:
+
+What is an Array?
+An array is a special variable, which can hold more than one value at a time.
+If you have a list of items (a list of car names, for example), storing the cars in single variables could look like this:
+
+Creating an Array
+Using an array literal is the easiest way to create a JavaScript Array.
+Syntax:
+var array_name = [item1, item2, ...]; //best
+var cars = new Array("Saab", "Volvo", "BMW");
+
+Access the Elements of an Array
+You refer to an array element by referring to the index number.
+This statement accesses the value of the first element in cars:
+var name = cars[0];
+cars[0] = "Opel";
+
+var cars = ["Saab", "Volvo", "BMW"];
+document.getElementById("demo").innerHTML = cars[0];
+
+Access the Full Array
+With JavaScript, the full array can be accessed by referring to the array name:
+var cars = ["Saab", "Volvo", "BMW"];
+document.getElementById("demo").innerHTML = cars;
+
+Array Elements Can Be Objects
+JavaScript variables can be objects. Arrays are special kinds of objects.
+Because of this, you can have variables of different types in the same Array.
+You can have objects in an Array. You can have functions in an Array. You can have arrays in an Array:
+
+myArray[0] = Date.now;
+myArray[1] = myFunction;
+myArray[2] = myCars;
+
+Array Properties and Methods
+The real strength of JavaScript arrays are the built-in array properties and methods:
+var x = cars.length;   // The length property returns the number of elements
+var y = cars.sort();   // The sort() method sorts arrays
+
+The length Property
+The length property of an array returns the length of an array (the number of array elements).
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.length;                       // the length of fruits is 4
+
+Looping Array Elements
+The best way to loop through an array, is using a "for" loop:
+
+Adding Array Elements
+The easiest way to add a new element to an array is using the push method:
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.push("Lemon");                // adds a new element (Lemon) to fruits
+
+The Difference Between Arrays and Objects
+In JavaScript, arrays use numbered indexes.  
+In JavaScript, objects use named indexes.
+
+When to Use Arrays. When to use Objects.
+JavaScript does not support associative arrays.
+You should use objects when you want the element names to be strings (text).
+You should use arrays when you want the element names to be numbers.
+
+How to Recognize an Array
+A common question is: How do I know if a variable is an array?
+The problem is that the JavaScript operator typeof returns "object":
+To solve this problem ECMAScript 5 defines a new method Array.isArray():
+Array.isArray(fruits);     // returns true
+
+Converting Arrays to Strings
+The JavaScript method toString() converts an array to a string of (comma separated) array values.
+The join() method also joins all array elements into a string.
+It behaves just like toString(), but in addition you can specify the separator:
+
+Popping and Pushing
+When you work with arrays, it is easy to remove elements and add new elements.
+This is what popping and pushing is:
+Popping items out of an array, or pushing items into an array.
+
+Popping
+The pop() method removes the last element from an array:
+Pushing
+The push() method adds a new element to an array (at the end):
+Shifting Elements
+Shifting is equivalent to popping, working on the first element instead of the last.
+The shift() method removes the first array element and "shifts" all other elements to a lower index.
+The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements:
+
+Splicing an Array
+The splice() method can be used to add new items to an array:
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2, 0, "Lemon", "Kiwi");
+The first parameter (2) defines the position where new elements should be added (spliced in).
+The second parameter (0) defines how many elements should be removed.
+The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.
+
+Using splice() to Remove Elements
+With clever parameter setting, you can use splice() to remove elements without leaving "holes" in the array:
+The first parameter (0) defines the position where new elements should be added (spliced in).
+The second parameter (1) defines how many elements should be removed.
+The rest of the parameters are omitted. No new elements will be added.
+
+Merging (Concatenating) Arrays
+The concat() method creates a new array by merging (concatenating) existing arrays:
+Slicing an Array
+The slice() method slices out a piece of an array into a new array.
+This example slices out a part of an array starting from array element 1 ("Orange"):
+
+Sorting an Array
+The sort() method sorts an array alphabetically:
+Reversing an Array
+The reverse() method reverses the elements in an array.
+You can use it to sort an array in descending order:
+
+The Compare Function
+The purpose of the compare function is to define an alternative sort order.
+The compare function should return a negative, zero, or positive value, depending on the arguments:
+function(a, b){return a-b}
+
+Using Math.max() on an Array
+You can use Math.max.apply to find the highest number in an array:
+Using Math.min() on an Array
+You can use Math.min.apply to find the lowest number in an array:
+
+Array.forEach()
+The forEach() method Calls a function once for each array element.
+Array.map()
+The map() method creates a new array by performing a function on each array element.
+Array.filter()
+The filter() method creates a new array with array elements that passes a test.
+Array.reduce()
+The reduce() method runs a function on each array element to produce (reduce it to) a single value.
+The reduce() method does not reduce the original array.
+Array.every()
+The every() method check if all array values pass a test.
+Array.some()
+The some() method check if some array values pass a test.
+Array.indexOf()
+Search an array for an element value and returns its position.
+Array.lastIndexOf()
+Array.lastIndexOf() is the same as Array.indexOf(), but searches from the end of the array.
+Array.find()
+The find() method returns the value of the first array element that passes a test function.
+Array.findIndex()
+The findIndex() method returns the index of the first array element that passes a test function.
+
+
+JavaScript Date Objects
+new Date()
+new Date(year, month, day, hours, minutes, seconds, milliseconds)
+new Date(milliseconds)
+new Date(date string)
+
+JavaScript Get Date Methods
+Method	Description
+getFullYear()	Get the year as a four digit number (yyyy)
+getMonth()	Get the month as a number (0-11)
+getDate()	Get the day as a number (1-31)
+getHours()	Get the hour (0-23)
+getMinutes()	Get the minute (0-59)
+getSeconds()	Get the second (0-59)
+getMilliseconds()	Get the millisecond (0-999)
+getTime()	Get the time (milliseconds since January 1, 1970)
+getDay()	Get the weekday as a number (0-6)
+
+JavaScript Set Date Methods
+Method	Description
+setDate()	Set the day as a number (1-31)
+setFullYear()	Set the year (optionally month and day)
+setHours()	Set the hour (0-23)
+setMilliseconds()	Set the milliseconds (0-999)
+setMinutes()	Set the minutes (0-59)
+setMonth()	Set the month (0-11)
+setSeconds()	Set the seconds (0-59)
+setTime()	Set the time (milliseconds since January 1, 1970)
+
+Math Properties
+Math.E        // returns Euler's number
+Math.PI       // returns PI
+Math.SQRT2    // returns the square root of 2
+Math.SQRT1_2  // returns the square root of 1/2
+Math.LN2      // returns the natural logarithm of 2
+Math.LN10     // returns the natural logarithm of 10
+Math.LOG2E    // returns base 2 logarithm of E
+Math.LOG10E   // returns base 10 logarithm of E
+
+JavaScript Random
+Math.floor(Math.random() * 100) + 1; // returns a random integer from 1 to 100
+A Proper Random Function
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min) ) + min;
+}
+
+JavaScript Booleans
+The Boolean() Function
+You can use the Boolean() function to find out if an expression (or a variable) is true:
+
+Booleans Can be Objects
+Normally JavaScript booleans are primitive values created from literals:
+var x = false;
+But booleans can also be defined as objects with the keyword new:
+var y = new Boolean(false);
+
+JavaScript Comparison and Logical Operators
+Conditional (Ternary) Operator
+variablename = (condition) ? value1:value2 
+
+JavaScript If...Else Statements
+Use if to specify a block of code to be executed, if a specified condition is true
+if (condition) {
+    block of code to be executed if the condition is true
+}
+Use else to specify a block of code to be executed, if the same condition is false
+if (condition) {
+    block of code to be executed if the condition is true
+} else { 
+    block of code to be executed if the condition is false
+}
+Use else if to specify a new condition to test, if the first condition is false
+if (condition1) {
+    block of code to be executed if condition1 is true
+} else if (condition2) {
+    block of code to be executed if the condition1 is false and condition2 is true
+} else {
+    block of code to be executed if the condition1 is false and condition2 is false
+}
+Use switch to specify many alternative blocks of code to be executed
+
+JavaScript Switch Statement
+switch(expression) {
+    case n:
+        code block
+        break;
+    case n:
+        code block
+        break;
+    default:
+        code block
+}
+
+
+JavaScript For Loop
+var i;
+for (i = 0; i < cars.length; i++) { 
+    text += cars[i] + "<br>";
+}
+
+Different Kinds of Loops
+JavaScript supports different kinds of loops:
+for - loops through a block of code a number of times
+	for (statement 1; statement 2; statement 3) {
+    code block to be executed
+	}
+	Statement 1 is executed (one time) before the execution of the code block.
+	Statement 2 defines the condition for executing the code block.
+	Statement 3 is executed (every time) after the code block has been executed.
+
+for/in - loops through the properties of an object
+var person = {fname:"John", lname:"Doe", age:25}; 
+var text = "";
+var x;
+for (x in person) {
+    text += person[x];
+}
+
+while - loops through a block of code while a specified condition is true
+while (condition) {
+    code block to be executed
+}
+
+do/while - also loops through a block of code while a specified condition is true
+The Do/While Loop
+The do/while loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.
+do {
+    code block to be executed
+}
+while (condition);
+
+
+JavaScript Break and Continue
+The break statement "jumps out" of a loop.
+The continue statement "jumps over" one iteration in the loop.
+
+JavaScript Let and Const
+var x = 10;
+// Here x is 10
+{ 
+    let x = 2;
+    // Here x is 2
+}
+// Here x is 10
+
+JavaScript const
+var x = 10;
+// Here x is 10
+{ 
+    const x = 2;
+    // Here x is 2
+}
+// Here x is 10
+
+JavaScript Type Conversion
+&	AND	Sets each bit to 1 if both bits are 1
+|	OR	Sets each bit to 1 if one of two bits is 1
+^	XOR	Sets each bit to 1 if only one of two bits is 1
+~	NOT	Inverts all the bits
+<<	Zero fill left shift	Shifts left by pushing zeros in from the right and let the leftmost bits fall off
+>>	Signed right shift	Shifts right by pushing copies of the leftmost bit in from the left, and let the rightmost bits fall off
+>>>	Zero fill right shift	Shifts right by pushing zeros in from the left, and let the rightmost bits fall off
+
+JavaScript Errors - Throw and Try to Catch
+
+
+
+
+
+

@@ -1,0 +1,6 @@
+h1{
+	color: blue;
+}
+input[type=textbox]{
+	border: 2px solid red;
+}

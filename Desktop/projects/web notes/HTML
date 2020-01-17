@@ -1,0 +1,363 @@
+<--
+The <!DOCTYPE html> declaration defines this document to be HTML5
+The <html> element is the root element of an HTML page
+The <head> element contains meta information about the document
+The <title> element specifies a title for the document
+The <body> element contains the visible page content
+The <h1> element defines a large heading
+The <p> element defines a paragraph !-->
+
+Headings <h1 ...h6>
+Paragraph <p>
+links <a href="..">
+Image <img src="" alt="">
+Button <button>
+
+lists
+HTML lists are defined with the <ul> (unordered/bullet list) or the <ol> (ordered/numbered list) tag, followed by <li> tags (list items):
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+
+Elements
+The HTML element is everything from the start tag to the end tag:
+<p>My first paragraph.</p>
+Empty elements can be "closed" in the opening tag like this: <br />.
+
+Attributes
+All HTML elements can have attributes
+Attributes provide additional information about an element
+Attributes are always specified in the start tag
+Attributes usually come in name/value pairs like: name="value"
+
+eg href in anchor, src & alt in img,  lang attribute, or <p title="tooltip">
+
+Horizontal lines <hr>
+The head also contains metadata
+
+Paragraphs<p></p>
+Preformatted tag<pre>
+
+Style
+<tagname style="property:name;"
+attributes: background-color, color, font-family, font-size, text-align
+
+Text formatting
+<b> - Bold text
+<strong> - Important text
+<i> - Italic text
+<em> - Emphasized text
+<mark> - Marked text
+<small> - Small text
+<del> - Deleted text
+<ins> - Inserted text
+<sub> - Subscript text
+<sup> - Superscript text
+
+Quotations
+one can use <q> for quotation <q>
+The HTML <blockquote> element defines a section that is quoted from another source.
+The HTML <abbr> element defines an abbreviation or an acronym.
+Also check <address> and <cite> elements
+<bdo dir="rtl"> is used to override text direction
+
+Comments 
+<!-- Comment-->
+
+Colors: Can use name, RGB values, HEX values, HSL values, RGBA values, and HSLA values
+hsl(hue, saturation, lightness)
+rgba(red, green, blue, alpha)
+hsla(hue, saturation, lightness, alpha)
+
+
+CSS
+Inline - by using the style attribute in HTML elements
+<h1 style="background-color:green;">
+Internal - by using a <style> element in the <head> section
+<head>
+<style>
+body {background-color: powderblue;}
+h1   {color: blue;}
+p    {color: red;}
+</style>
+</head>
+External - by using an external CSS file
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+border property defines a border around an HTML element:
+padding property defines a padding (space) between the text and the border:
+margin property defines a margin (space) outside the border:
+To define a specific style for one special element, add an id attribute to the element:
+	#p01 {
+    color: blue;
+	}
+To define a style for special types of elements, add a class attribute to the element
+	p.error {
+    color: red;
+	}
+
+Links
+An unvisited link is underlined and blue
+A visited link is underlined and purple
+An active link is underlined and red
+
+<a href="www.whatever.com target="_blank">
+The target attribute specifies where to open the linked document.
+The target attribute can have one of the following values:
+_blank - Opens the linked document in a new window or tab
+_self - Opens the linked document in the same window/tab as it was clicked (this is default)
+_parent - Opens the linked document in the parent frame
+_top - Opens the linked document in the full body of the window
+framename - Opens the linked document in a named frame
+Bookmark;
+<h2 id="C4">Chapter 4</h2>
+<a href="#C4">Jump to Chapter 4</a>
+
+Images
+<img src="html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">
+Use the CSS float property to let the image float to the right or to the left of a text:
+
+Show one picture if the browser window (viewport) is a minimum of 650 pixels, and another image if not, but larger than 465 pixels.
+
+<picture>
+  <source media="(min-width: 650px)" srcset="img_pink_flowers.jpg">
+  <source media="(min-width: 465px)" srcset="img_white_flower.jpg">
+  <img src="img_orange_flowers.jpg" alt="Flowers" style="width:auto;">
+</picture>
+Background Image
+<body style="background-image:url('clouds.jpg')">
+<map> tag
+
+An HTML table is defined with the <table> tag.
+
+Each table row is defined with the <tr> tag. A table header is defined with the <th> tag. By default, table headings are bold and centered. A table data/cell is defined with the <td> tag.
+
+table, th, td {
+    border: 1px solid black;
+}
+colspan and rowspan
+To add a caption to a table, use the <caption> tag:
+
+
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+    background-color: #fff;
+}
+table#t01 th {
+    color: white;
+    background-color: black;
+}
+
+
+Lists
+Unordered HTML List
+An unordered list starts with the <ul> tag. Each list item starts with the <li> tag.
+
+The list items will be marked with bullets (small black circles) by default:
+disc	Sets the list item marker to a bullet (default)
+circle	Sets the list item marker to a circle
+square	Sets the list item marker to a square
+none	The list items will not be marked
+
+Ordered HTML List
+An ordered list starts with the <ol> tag. Each list item starts with the <li> tag.
+
+The list items will be marked with numbers by default:
+type="1"	The list items will be numbered with numbers (default)
+type="A"	The list items will be numbered with uppercase letters
+type="a"	The list items will be numbered with lowercase letters
+type="I"	The list items will be numbered with uppercase roman numbers
+type="i"	The list items will be numbered with lowercase roman numbers
+
+HTML Description Lists
+HTML also supports description lists.
+
+A description list is a list of terms, with a description of each term.
+
+The <dl> tag defines the description list, the <dt> tag defines the term (name), and the <dd> tag describes each term:
+
+Lists can be nested inside lists
+List items can contain other HTML elements
+Use the CSS property float:left or display:inline to display a list horizontally
+
+Blocks
+Block-level Elements
+A block-level element always starts on a new line and takes up the full width available (stretches out to the left and right as far as it can).
+Inline Elements
+An inline element does not start on a new line and only takes up as much width as necessary.
+
+<div>	Defines a section in a document (block-level)
+<span>	Defines a section in a document (inline)
+
+Using The class Attribute
+The class attribute specifies one or more class names for an HTML element.
+
+The class name can be used by CSS and JavaScript to perform certain tasks for elements with the specified class name.
+
+In CSS, to select elements with a specific class, write a period (.) character, followed by the name of the class:
+
+ID
+The id attribute specifies a unique id for an HTML element (the value must be unique within the HTML document).
+In CSS, to select an element with a specific id, write a hash (#) character, followed by the id of the element:
+
+Difference Between Class and ID
+An HTML element can only have one unique id that belongs to that single element, while a class name can be used by multiple elements:
+
+IFRAMES
+An iframe is used to display a web page within a web page.
+<iframe src="URL"></iframe>
+
+<iframe height="300px" width="100%" src="demo_iframe.htm" name="iframe_a"></iframe>
+<p><a href="https://www.w3schools.com" target="iframe_a">W3Schools.com</a></p>
+When the target of a link matches the name of an iframe, the link will open in the iframe.
+
+HTML JavaScript
+The <script> tag is used to define a client-side script (JavaScript).
+The <script> element either contains scripting statements, or it points to an external script file through the src attribute.
+
+To select an HTML element, JavaScript very often uses the document.getElementById() method.
+The <noscript> tag is used to provide an alternate content for users that have disabled scripts in their browser or have a browser that doesnt support client-side scripts: 
+
+File paths
+Absolute File Paths
+An absolute file path is the full URL to an internet file:
+Example
+<img src="https://www.w3schools.com/images/picture.jpg" alt="Mountain">
+
+Relative File Paths
+A relative file path points to a file relative to the current page.
+In this example, the file path points to a file in the images folder located at the root of the current web:
+Example
+<img src="/images/picture.jpg" alt="Mountain">
+
+It is best practice to use relative file paths
+
+HTML HEAD.
+The following tags describe metadata: <title>, <style>, <meta>, <link>, <script>, and <base>.
+
+The HTML <title> Element
+The <title> element defines the title of the document, and is required in all HTML/XHTML documents.
+
+The HTML <style> Element
+The <style> element is used to define style information for a single HTML page:
+
+The HTML <link> Element
+The <link> element is used to link to external style sheets:
+<link rel="stylesheet" href="mystyle.css">
+
+The HTML <meta> Element
+The <meta> element is used to specify which character set is used, page description, keywords, author, and other metadata.
+Metadata is used by browsers (how to display content), by search engines (keywords), and other web services.
+Define the character set used:
+<meta charset="UTF-8">
+Define a description of your web page:
+<meta name="description" content="Free Web tutorials">
+Define keywords for search engines:
+<meta name="keywords" content="HTML, CSS, XML, JavaScript">
+Define the author of a page:
+<meta name="author" content="John Doe">
+Refresh document every 30 seconds:
+<meta http-equiv="refresh" content="30">
+
+Setting The Viewport
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+The HTML <script> Element
+The <script> element is used to define client-side JavaScripts.
+
+The HTML <base> Element
+The <base> element specifies the base URL and base target for all relative URLs in a page:
+
+HTML Layouts
+HTML5 offers new semantic elements that define the different parts of a web page:
+
+HTML5 Semantic Elements	
+<header> - Defines a header for a document or a section
+<nav> - Defines a container for navigation links
+<section> - Defines a section in a document
+<article> - Defines an independent self-contained article
+<aside> - Defines content aside from the content (like a sidebar)
+<footer> - Defines a footer for a document or a section
+<details> - Defines additional details
+<summary> - Defines a heading for the <details> element
+
+HTML Layout Techniques
+There are four different ways to create multicolumn layouts. Each way has its pros and cons:
+
+HTML tables (not recommended)
+CSS float property
+CSS flexbox
+CSS framework
+
+HTML Responsive Web Design
+Responsive Images
+Responsive images are images that scale nicely to fit any browser size.
+Using the width Property
+If the CSS width property is set to 100%, the image will be responsive and scale up and down:
+Notice that in the example above, the image can be scaled up to be larger than its original size. A better solution, in many cases, will be use the max-width property instead.
+
+Using the max-width Property
+If the max-width property is set to 100%, the image will scale down if it has to, but never scale up to be larger than its original size:
+
+
+Show Different Images Depending on Browser Width
+The HTML <picture> element allows you to define different images for different browser window sizes.
+Resize the browser window to see how the image below change depending on the width:
+
+Responsive Text Size
+The text size can be set with a "vw" unit, which means the "viewport width".
+That way the text size will follow the size of the browser window:
+<h1 style="font-size:10vw">Hello World</h1>
+
+
+HTML Computer Code Elements
+Computer Code <code>
+HTML <kbd> For Keyboard Input
+HTML <samp> For Program Output
+he HTML <var> element defines a variable.
+
+	non-breaking space	&nbsp;	&#160;
+<	less than	&lt;	&#60;
+>	greater than	&gt;	&#62;
+&	ampersand	&amp;	&#38;
+"	double quotation mark	&quot;	&#34;
+'	single quotation mark (apostrophe)	&apos;	&#39;
+
+ ̀	a	a&#768;	à
+ ́	a	a&#769;	á
+̂	a	a&#770;	â
+ ̃	a	a&#771;	ã
+
+ HTML Symbol Entities
+
+ URL - Uniform Resource Locator
+
+ scheme://prefix.domain:port/path/filename
+ scheme - defines the type of Internet service (most common is http or https)
+prefix - defines a domain prefix (default for http is www)
+domain - defines the Internet domain name (like w3schools.com)
+port - defines the port number at the host (default for http is 80)
+path - defines a path at the server (If omitted: the root directory of the site)
+filename - defines the name of a document or resource
+
+The Most Important Differences from HTML:
+Document Structure
+XHTML DOCTYPE is mandatory
+The xmlns attribute in <html> is mandatory
+<html>, <head>, <title>, and <body> are mandatory
+XHTML Elements
+XHTML elements must be properly nested
+XHTML elements must always be closed
+XHTML elements must be in lowercase
+XHTML documents must have one root element
+XHTML Attributes
+Attribute names must be in lower case
+Attribute values must be quoted
+Attribute minimization is forbidden
+

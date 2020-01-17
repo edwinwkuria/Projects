@@ -1,0 +1,113 @@
+The purpose of jQuery is to make it much easier to use JavaScript on your website.
+The jQuery library contains the following features:
+
+HTML/DOM manipulation
+CSS manipulation
+HTML event methods
+Effects and animations
+AJAX
+Utilities
+
+Downloading jQuery
+There are two versions of jQuery available for downloading:
+Production version - this is for your live website because it has been minified and compressed
+Development version - this is for testing and development (uncompressed and readable code)
+Both versions can be downloaded from jQuery.com.
+The jQuery library is a single JavaScript file, and you reference it with the HTML <script> tag (notice that the <script> tag should be inside the <head> section):
+
+jQuery Syntax
+jQuery Syntax
+The jQuery syntax is tailor-made for selecting HTML elements and performing some action on the element(s).
+Basic syntax is: $(selector).action()
+A $ sign to define/access jQuery
+A (selector) to "query (or find)" HTML elements
+A jQuery action() to be performed on the element(s)
+
+The Document Ready Event
+You might have noticed that all jQuery methods in our examples, are inside a document ready event:
+$(document).ready(function(){
+
+   // jQuery methods go here...
+
+});
+
+jQuery Selectors
+jQuery selectors allow you to select and manipulate HTML element(s).
+jQuery selectors are used to "find" (or select) HTML elements based on their name, id, classes, types, attributes, values of attributes and much more. It's based on the existing CSS Selectors, and in addition, it has some own custom selectors.
+All selectors in jQuery start with the dollar sign and parentheses: $().
+
+The #id Selector
+$("#test")
+
+The .class Selector
+$(".test")
+
+Syntax	Description	Example
+$("*")	Selects all elements	
+$(this)	Selects the current HTML element	
+$("p.intro")	Selects all <p> elements with class="intro"	
+$("p:first")	Selects the first <p> element	
+$("ul li:first")	Selects the first <li> element of the first <ul>	
+$("ul li:first-child")	Selects the first <li> element of every <ul>	
+$("[href]")	Selects all elements with an href attribute	
+$("a[target='_blank']")	Selects all <a> elements with a target attribute value equal to "_blank"	
+$("a[target!='_blank']")	Selects all <a> elements with a target attribute value NOT equal to "_blank"	
+$(":button")	Selects all <button> elements and <input> elements of type="button"	
+$("tr:even")	Selects all even <tr> elements	
+$("tr:odd")	Selects all odd <tr> elements
+
+Functions In a Separate File
+If your website contains a lot of pages, and you want your jQuery functions to be easy to maintain, you can put your jQuery functions in a separate .js file.
+
+jQuery Event Methods
+Mouse Events	Keyboard Events	Form Events	Document/Window Events
+click	    keypress	submit	load
+dblclick	keydown	    change	resize
+mouseenter	keyup	    focus	scroll
+mouseleave	 	        blur	unload 
+
+jQuery Syntax For Event Methods
+$("p").click();
+
+Commonly Used jQuery Event Methods
+$(document).ready()
+The $(document).ready() method allows us to execute a function when the document is fully loaded. This event is already explained in the jQuery Syntax chapter.
+
+click()
+The click() method attaches an event handler function to an HTML element.
+
+dblclick()
+The dblclick() method attaches an event handler function to an HTML element.
+The function is executed when the user double-clicks on the HTML element:
+
+mouseenter()
+The mouseenter() method attaches an event handler function to an HTML element.
+The function is executed when the mouse pointer enters the HTML element:
+
+mouseleave()
+The mouseleave() method attaches an event handler function to an HTML element.
+The function is executed when the mouse pointer leaves the HTML element:
+
+mousedown()
+The mousedown() method attaches an event handler function to an HTML element.
+The function is executed, when the left, middle or right mouse button is pressed down, while the mouse is over the HTML element:
+
+mouseup()
+The mouseup() method attaches an event handler function to an HTML element.
+The function is executed, when the left, middle or right mouse button is released, while the mouse is over the HTML element:
+
+hover()
+The hover() method takes two functions and is a combination of the mouseenter() and mouseleave() methods.
+The first function is executed when the mouse enters the HTML element, and the second function is executed when the mouse leaves the HTML element:
+
+focus()
+The focus() method attaches an event handler function to an HTML form field.
+The function is executed when the form field gets focus:
+
+blur()
+The blur() method attaches an event handler function to an HTML form field.
+The function is executed when the form field loses focus:
+
+The on() Method
+The on() method attaches one or more event handlers for the selected elements.
+

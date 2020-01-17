@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Vue  Practical</title>
+  </head>
+  <body>
+<div id="todo">
+  <input type="text" v-model:value="newtodo" v-bind:placeholder="placeholder" v-on:shift="addItem">
+  <button type="button" name="button" v-on:click="addItem">Add Item</button>
+  <ol>
+    <li v-for="todo in todolist">{{ todo }}</li>
+  </ol>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="main.js"></script>
+  </body>
+</html>

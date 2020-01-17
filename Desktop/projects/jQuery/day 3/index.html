@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+	<title>Day 3</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<fieldset>
+	<legend>Submit Details</legend>
+	<form id="NewForm">
+		First Name:
+		<input type="textbox" id="FirstName" placeholder="FirstName" onchange="FirstNameValidator()">
+		<br/><br/>
+		Last Name:
+		<input type="textbox" id="LastName" placeholder="LastName" onchange="LastNameValidator()">
+		<br/><br/>
+		Email:
+		<input type="textbox" id="Email" placeholder="someone@example.com" onchange="EmailValidator()">
+		<br/><br/>
+		<button type="submit">Submit</button>
+	</form>
+</fieldset>
+<span id="ValidatedFirstName"></span><span id="ValidatedLastName"> </span><span id="ValidatedEmail"></span>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

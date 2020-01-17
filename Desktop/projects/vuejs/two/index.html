@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+<title>Learning Vue</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<!--<link rel="stylesheet" type="text/css" href="style.css">-->
+</head>
+<body>
+<div class="container">
+  <div id="greeting">
+    <button v-bind:class="{'btn': 'isActive','btn-primary': 'isActive'}">
+      Hello World
+    </button>
+    {{ message }}
+    {{ convertstouppercase }}
+    <button class="btn btn-danger" v-bind:disabled="visibility">You can see me</button>
+    <button v-on:[event]="convertstouppercase">Upper</button>
+    <button v-on:[event]="convertstolowercase">Lower</button>
+    <ol>
+      <item-list v-for="(animal,index) in animals" v-bind:item="animal" v-bind:key="index"> </item-list>
+    </ol>
+      <ol>
+        <item-list v-for="(user,index) in userslist" v-bind:item="user" v-bind:key="index"> </item-list>
+      </ol>
+      <input type="text" v-model="one">
+      <input type="text" v-model="two">
+      {{one }} plus {{two }}= {{ result}}
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
