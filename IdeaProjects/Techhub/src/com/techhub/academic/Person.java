@@ -16,8 +16,8 @@ public class Person {
         LastName = lastName;
         DateOfBirth = dateOfBirth;
         RegistrationNumber = registrationNumber;
-        schoolId = schoolId;
-        departmentId = departmentId;
+        this.schoolId = schoolId;
+        this.departmentId = departmentId;
     }
     /**
      * Accessors and Mutators
@@ -46,6 +46,10 @@ public class Person {
         LastName = lastName;
     }
 
+    public String getFullName(){
+        return FirstName +" "+LastName;
+    }
+
     public String getDateOfBirth() {
         return DateOfBirth;
     }
@@ -62,19 +66,19 @@ public class Person {
         RegistrationNumber = registrationNumber;
     }
 
-    public int getSchool() {
+    public int getSchoolId() {
         return schoolId;
     }
 
     public void setSchool(int school) {
-        this.schoolId = schoolId;
+        schoolId = school;
     }
 
-    public int getDepartment() {
+    public int getDepartmentId() {
         return departmentId;
     }
 
-    public void setDepartment(int departmentId) {
-        this.departmentId = departmentId;
+    public void setDepartment(int department) {
+        departmentId = department;
     }
 }

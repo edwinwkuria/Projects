@@ -13,9 +13,10 @@ public class SchoolService extends School implements AcademicI  {
     }
 
     @Override
-    public void Read(Object o) {
+    public void Read(Object[] o) {
+        System.out.println("Total schools: "+ schools.size());
         for (School school : schools) {
-            System.out.println(school);
+            System.out.println(school.getSchoolName());
         }
     }
 
@@ -62,8 +63,5 @@ public class SchoolService extends School implements AcademicI  {
             }
         }
         return "Object is incorrect";
-        //System.out.println(getSchools());
-        //return "Hello World";
-
     }
 }

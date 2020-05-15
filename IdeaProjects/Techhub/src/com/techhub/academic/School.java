@@ -14,7 +14,7 @@ public class School {
         return schools;
     }
 
-    public List<School> schools = new ArrayList<>();
+    protected List<School> schools = new ArrayList<>();
     /**
      * Constructor
      */
