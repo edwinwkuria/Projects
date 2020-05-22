@@ -8,6 +8,7 @@ public interface AcademicI {
     public Object FindOne(Object o);
     public int size();
     public String getClassName(int i);
+    public int saveToDatabase(Object o);
 
 
 }

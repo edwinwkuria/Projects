@@ -3,10 +3,12 @@ package com.techhub.services;
 import com.techhub.academic.Lecturer;
 import com.techhub.academic.School;
 import com.techhub.academic.Student;
+import com.techhub.database.Crud;
 
 import java.util.StringJoiner;
 
 public class StudentService extends Student implements AcademicI {
+    Crud crud = new Crud();
     @Override
     public void Add(Object o) {
         Student student = (Student) o;
@@ -71,5 +73,25 @@ public class StudentService extends Student implements AcademicI {
             }
         }
         return "Object is incorrect";
+    }
+
+    @Override
+    public int saveToDatabase(Object o) {
+        if(o instanceof Student) {
+            Student student = (Student) o;
+            String firstName = student.getFirstName();
+            String lastName = student.getLastName();
+            String dateOfBirth = student.getDateOfBirth();
+            String regNo = student.getRegistrationNumber();
+            int schoolId = student.getSchoolId();
+            int departmentId = student.getDepartmentId();
+            String course = student.getCourse();
+            String connectionString = crud.generateDBString();
+            String statementString = String.format("INSERT INTO students(firstname,lastname,dateofbirth,registrationnumber,schoolid,departmentid,course)" +
+                    " VALUES ('%s','%s','%s','%s','%d','%d','%s')", firstName,lastName,dateOfBirth,regNo,schoolId,departmentId,course);
+            return crud.saveToDatabase(connectionString, statementString);
+        }
+        else
+            return -1;
     }
 }

@@ -1,17 +1,17 @@
 package com.techhub.services;
 
 import com.techhub.academic.School;
+import com.techhub.database.Crud;
 
 import java.util.concurrent.atomic.AtomicReference;
 
 public class SchoolService extends School implements AcademicI  {
-
+    Crud crud = new Crud();
     @Override
     public void Add (Object o) {
         School school = (School) o;
         schools.add(school);
     }
-
     @Override
     public void Read(Object[] o) {
         System.out.println("Total schools: "+ schools.size());
@@ -63,5 +63,17 @@ public class SchoolService extends School implements AcademicI  {
             }
         }
         return "Object is incorrect";
+    }
+    @Override
+    public int saveToDatabase(Object o) {
+        if(o instanceof School) {
+            School school = (School) o;
+            String schoolName = school.getSchoolName();
+            String connectionString = crud.generateDBString();
+            String statementString = String.format("INSERT INTO schools(name) VALUES ('%s')", schoolName);
+            return crud.saveToDatabase(connectionString, statementString);
+        }
+        else
+            return -1;
     }
 }

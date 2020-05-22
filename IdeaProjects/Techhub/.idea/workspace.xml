@@ -22,7 +22,16 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SMS/schoolmanagementsystem" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -60,10 +69,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser" timestamp="1589539807065">
+    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser" timestamp="1589971528370">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/1366.0.1024.728@0.0.1366.728" timestamp="1588432670816" />
+    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/1366.0.1024.728@0.0.1366.728" timestamp="1589971528370" />
     <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1589539807065" />
     <state x="387" y="47" key="#com.intellij.refactoring.encapsulateFields.EncalpsulateFieldsDialog" timestamp="1589530179341">
       <screen x="0" y="0" width="1366" height="728" />
@@ -73,38 +82,56 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="441" y="234" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.728@0.0.1366.728" timestamp="1588876182299" />
-    <state width="1323" height="339" key="GridCell.Tab.0.bottom" timestamp="1589561274910">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1589651003715">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1024.728@0.0.1366.728" timestamp="1588433218375" />
-    <state width="1323" height="339" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589561274910" />
-    <state width="1323" height="339" key="GridCell.Tab.0.center" timestamp="1589561274910">
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1589651003715" />
+    <state width="1323" height="570" key="GridCell.Tab.0.bottom" timestamp="1589994399144">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1024.728@0.0.1366.728" timestamp="1588433218374" />
-    <state width="1323" height="339" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589561274910" />
-    <state width="1323" height="339" key="GridCell.Tab.0.left" timestamp="1589561274910">
+    <state width="1323" height="570" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1024.728@0.0.1366.728" timestamp="1589994399144" />
+    <state width="1323" height="245" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589820643489" />
+    <state width="1323" height="570" key="GridCell.Tab.0.center" timestamp="1589994399140">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1024.728@0.0.1366.728" timestamp="1588433218374" />
-    <state width="1323" height="339" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589561274910" />
-    <state width="1323" height="339" key="GridCell.Tab.0.right" timestamp="1589561274910">
+    <state width="1323" height="570" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1024.728@0.0.1366.728" timestamp="1589994399140" />
+    <state width="1323" height="245" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589820643489" />
+    <state width="1323" height="570" key="GridCell.Tab.0.left" timestamp="1589994399140">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1024.728@0.0.1366.728" timestamp="1588433218374" />
-    <state width="1323" height="339" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589561274910" />
-    <state x="378" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1589519803439">
+    <state width="1323" height="570" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1024.728@0.0.1366.728" timestamp="1589994399140" />
+    <state width="1323" height="245" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589820643488" />
+    <state width="1323" height="570" key="GridCell.Tab.0.right" timestamp="1589994399140">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="378" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1589519803439" />
+    <state width="1323" height="570" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1024.728@0.0.1366.728" timestamp="1589994399140" />
+    <state width="1323" height="245" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589820643489" />
+    <state x="348" y="62" key="NewModule_or_Project.wizard" timestamp="1589651010300">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="348" y="62" key="NewModule_or_Project.wizard/0.0.1366.728@0.0.1366.728" timestamp="1589651010300" />
+    <state x="184" y="0" key="SettingsEditor" timestamp="1589782255223">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1589782255223" />
+    <state x="378" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1590136975922">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="378" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1024.728@0.0.1366.728" timestamp="1589910833520" />
+    <state x="378" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1590136975922" />
+    <state x="408" y="257" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1589782212353">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="408" y="257" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1366.728@0.0.1366.728" timestamp="1589782212353" />
     <state x="182" y="99" width="1002" height="566" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1588876336676">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="182" y="99" width="1002" height="566" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1366.728@0.0.1366.728" timestamp="1588876336676" />
-    <state x="65" y="0" key="new project wizard" timestamp="1588402235588">
+    <state x="65" y="0" key="new project wizard" timestamp="1589650930153">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="65" y="0" key="new project wizard/0.0.1366.728/1366.0.1024.728@0.0.1366.728" timestamp="1588402235588" />
+    <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1589650930153" />
     <state x="425" y="0" key="refactoring.ChangeSignatureDialog" timestamp="1588584441594">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

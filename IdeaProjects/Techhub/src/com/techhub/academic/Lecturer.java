@@ -2,6 +2,7 @@ package com.techhub.academic;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 import static com.techhub.academic.Unit.*;
@@ -34,22 +35,6 @@ public class Lecturer extends Person {
         this.units = units;
     }
     /**
-     * To String method
-     */
-    @Override
-    public String toString() {
-        return "Lecturer{" +
-                ", Id=" + Id +
-                ", FirstName='" + FirstName + '\'' +
-                ", LastName='" + LastName + '\'' +
-                ", DateOfBirth='" + DateOfBirth + '\'' +
-                ", RegistrationNumber='" + RegistrationNumber + '\'' +
-                ", school=" + schoolId +
-                ", department=" + departmentId +
-                "units=" + Arrays.toString(units) +
-                '}';
-    }
-    /**
      * initialize
      */
     static Unit[] leconeunits = {economics101 ,economics201 ,practicaleconomics};
@@ -61,4 +46,13 @@ public class Lecturer extends Person {
     public static Lecturer lectwo = new Lecturer(2,"Jane","Doe","1985","UN12345",economics.getId(), appliedeconomics.getId(),lectwounits);
     public static Lecturer lecthree = new Lecturer(3,"James","John","1967","UN2346",computing.getId(), programming.getId(),lecthreeunits);
     public static Lecturer lecfour = new Lecturer(4,"Mike","Doe","1945","UN22156",computing.getId(),datascience.getId(),lecfourunits);
+
+    public String getUnitString() {
+        StringBuilder string = new StringBuilder();
+        for (Unit unit:units){
+            string.append(unit.getId());
+
+        }
+        return string.toString();
+    }
 }

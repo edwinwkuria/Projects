@@ -1,9 +1,12 @@
 package com.techhub.academic;
 
+import java.util.Date;
+
 public class Person {
     //Properties
     protected int Id, schoolId, departmentId;
-    protected String FirstName, LastName, DateOfBirth, RegistrationNumber;
+    protected String FirstName, LastName, RegistrationNumber;
+    protected String DateOfBirth;
     /**
      * Constructor
      */

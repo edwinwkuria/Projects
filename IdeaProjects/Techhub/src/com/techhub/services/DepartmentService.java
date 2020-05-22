@@ -3,11 +3,13 @@ package com.techhub.services;
 import com.techhub.academic.Department;
 import com.techhub.academic.School;
 import com.techhub.academic.Student;
+import com.techhub.database.Crud;
 
 import java.util.Iterator;
 
 public class DepartmentService extends Department implements AcademicI {
     SchoolService schoolService;
+    Crud crud = new Crud();
     @Override
     public void Add(Object o) {
         Department department = (Department) o;
@@ -66,5 +68,20 @@ public class DepartmentService extends Department implements AcademicI {
             }
         }
         return "Object is incorrect";
+    }
+
+    @Override
+    public int saveToDatabase(Object o) {
+        if(o instanceof Department) {
+            Department department = (Department) o;
+            String departmentName = department.getName();
+            String chairman = department.getChairman();
+            int schoolId = department.getSchool();
+            String connectionString = crud.generateDBString();
+            String statementString = String.format("INSERT INTO departments(name,chairman,schoolid) VALUES ('%s','%s','%d')", departmentName,chairman,schoolId);
+            return crud.saveToDatabase(connectionString, statementString);
+        }
+        else
+            return -1;
     }
 }
